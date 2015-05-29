@@ -1,0 +1,7 @@
+Base/Debug/
+Classes/Debug/
+Test/Debug/
+*.suo
+*.sdf
+*.opensdf
+*.ipch
