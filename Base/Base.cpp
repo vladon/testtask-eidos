@@ -13,7 +13,6 @@ EmployeeBase::EmployeeBase()
 void EmployeeBase::FillBaseWithTestData()
 {
 	base.clear();
-	base.reserve(10);
 
 	base.emplace_back(
 		new Mounter(
@@ -55,14 +54,14 @@ void EmployeeBase::FillBaseWithTestData()
 	);
 
 
-	//base.emplace_back(
-	//	new CppDeveloper(
-	//			"Mihail",
-	//			"Mihaylov",
-	//			104.0,
-	//			"Moscow State University",
-	//			3,
-	//			"Visual Studio"
-	//	)
-	//);
+	base.emplace_back(
+		new CppDeveloper(
+				"Mihail",
+				"Mihaylov",
+				104.0,
+				"Moscow State University",
+				3,
+				"Visual Studio"
+		)
+	);
 }

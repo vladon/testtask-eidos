@@ -1,4 +1,11 @@
-class __declspec(dllexport) EmployeeBase
+#pragma once
+
+#include <memory>
+#include <vector>
+
+#include "../Classes/Classes.h"
+
+class EmployeeBase
 {
 public:
 	EmployeeBase();
