@@ -3,7 +3,9 @@
 #ifndef CLASSES_H
 #define CLASSES_H
 
-class __declspec(dllexport) Employee
+#include <map>
+
+class Employee
 {
 public:
 	enum class Position
@@ -18,13 +20,14 @@ public:
 public:
 	Employee() = delete;
 
+	virtual const std::string GetInfo();
+	virtual double GetSalary();
+
 protected:
 	static const std::map<Position, const std::string> PositionNames;
 
 	Employee(const std::string a_firstName, const std::string a_lastName, const Position a_position, double a_salary);
 
-	virtual const std::string GetInfo();
-	virtual double GetSalary();
 
 	std::string firstName;
 	std::string lastName;
@@ -32,7 +35,7 @@ protected:
 	double salary;
 };
 
-class __declspec(dllexport) Mounter : public Employee
+class Mounter : public Employee
 {
 public:
 	enum class MountingDepartment
@@ -51,7 +54,7 @@ private:
 	MountingDepartment mountingDepartment;
 };
 
-class __declspec(dllexport) Electronician : public Employee
+class Electronician : public Employee
 {
 public:
 	enum class OhmLaw
@@ -74,7 +77,7 @@ private:
 	KnownOhmLaws knownOhmLaws;
 };
 
-class __declspec(dllexport) Developer : public Employee
+class Developer : public Employee
 {
 public:
 	Developer() = delete;
@@ -93,7 +96,7 @@ private:
 	std::string university;
 };
 
-class __declspec(dllexport) Economist : public Employee
+class Economist : public Employee
 {
 public:
 	Economist() = delete;
@@ -108,7 +111,7 @@ private:
 	int nCompanies;
 };
 
-class __declspec(dllexport) CppDeveloper : Developer
+class CppDeveloper : public Developer
 {
 public:
 	CppDeveloper() = delete;

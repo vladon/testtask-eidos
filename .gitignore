@@ -1,6 +1,7 @@
 Base/Debug/
 Classes/Debug/
 Test/Debug/
+Debug/
 *.suo
 *.sdf
 *.opensdf

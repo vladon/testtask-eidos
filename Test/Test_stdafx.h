@@ -12,5 +12,12 @@
 
 // TODO: reference additional headers your program requires here
 
+#include <algorithm>
+#include <functional>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <Windows.h>
+
 #include "../Base/Base.h"
 #include "../Classes/Classes.h"
